@@ -21,7 +21,7 @@ class handler(BaseHTTPRequestHandler):
             print(data)
             definitions = []
             for word_data in data:
-                definition = word_data["meanings"][0]["definitions"][0]["definition"]
+                definition = word_data["name"][0]["bred_for"][0]["breed_group"]
                 definitions.append(definition)
             message = str(definitions)
         else:
